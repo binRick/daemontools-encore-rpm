@@ -45,11 +45,11 @@ find
 %install
 rm -rf ${RPM_BUILD_ROOT}
 mkdir -p ${RPM_BUILD_ROOT}/usr/bin
-for x in envdir envini envuidgid fghack multilog pgrphack readproctitle setlock setuidgid setuser softlimit supervise svc svok svscan svscanboot svstat svup tai64n tai64nlocal envini setuser svup
+for x in envdir envini envuidgid fghack multilog pgrphack readproctitle setlock setuidgid setuser softlimit supervise svc svok svscan svstat svup tai64n tai64nlocal envini setuser svup
 do
 cp -fp $x ${RPM_BUILD_ROOT}/usr/bin
 done
-#cp -fp ${RPM_SOURCE_DIR}/svscanboot ${RPM_BUILD_ROOT}/usr/bin
+cp -fp ${RPM_SOURCE_DIR}/svscanboot ${RPM_BUILD_ROOT}/usr/bin
 #%if 0%{?rhel} >= 7 || 0%{?fedora} >= 23
 mkdir -p ${RPM_BUILD_ROOT}/usr/lib/systemd/system
 cp -p ${RPM_SOURCE_DIR}/daemontools.service ${RPM_BUILD_ROOT}/usr/lib/systemd/system

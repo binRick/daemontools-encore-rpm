@@ -16,7 +16,7 @@ git clone https://github.com/bruceg/daemontools-encore  && \
 	
 #cp -af ${DIR_BASE}/daemontools-encore.tar.gz .
 #cp -af ${DIR_BASE}/daemontools-error.h.patch .
-cp -af ${DIR_BASE}/daemontools.conf .
+#cp -af ${DIR_BASE}/daemontools.conf .
 cp -af ${DIR_BASE}/daemontools.service .
 cp -af ${DIR_BASE}/svscanboot .
 cd - > /dev/null
