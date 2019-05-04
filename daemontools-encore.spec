@@ -37,7 +37,6 @@ If the disk fills up, it pauses and tries again, without losing any data.
 
 %build
 ./makedist
-./makemake
 make
 find
 
