@@ -1,5 +1,5 @@
 %define _name	daemontools-encore
-%define _ver	1.11
+%define _ver	__RELEASE_VERSION__
 %define _dist	%(sh /usr/lib/rpm/redhat/dist.sh)
 %define _rel	1%{?_dist}
 %global debug_package %{nil}
@@ -12,7 +12,7 @@ Summary:	Service Monitoring and Logging Utilities
 Group:		Unspecified
 License:	Public Domain
 URL:		http://cr.yp.to/daemontools.html
-Source0:	daemontools-encore-1.11.tar.gz
+Source0:	daemontools-encore-__RELEASE_VERSION__.tar.gz
 #Patch0:		daemontools-error.h.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
