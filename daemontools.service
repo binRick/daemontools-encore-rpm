@@ -3,8 +3,25 @@ Description=Daemontools Service Manager
 After=sysinit.target
 
 [Service]
+Type=simple
 ExecStart=/usr/bin/svscanboot
 Restart=always
+RestartSec=30s
+KillMode=control-group
+
+User=root
+Group=root
+
+Environment="VAR1=abc"
+
+Slice=daemontools.slice
+
+CPUAccounting=True
+BlockIOAccounting=True
+MemoryAccounting=True
+TasksAccounting=True
+
+PrivateTmp=False
 
 [Install]
 WantedBy=multi-user.target
