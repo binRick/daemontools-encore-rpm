@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
+set -e
 DIR_BASE=$(cd ${BASH_SOURCE[0]%/*} && pwd)
 RELEASE_VERSION=$1
+
+command -v rpmbuild >/dev/null || dnf -y install rpm-build
+
 if [ "$RELEASE_VERSION" == "" ]; then
 	  echo "First argument must be release version to compile"; exit 1
 fi
